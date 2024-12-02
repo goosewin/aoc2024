@@ -24,6 +24,33 @@ export function parseNumberPairs(input: string): [number[], number[]] {
   return [left, right];
 }
 
+export function parseNumberSequences(input: string): number[][] {
+  const lines = input.trim().split("\n");
+  const sequences = new Array(lines.length);
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const numbers = new Array(5);
+    let numCount = 0;
+
+    let start = 0;
+    for (let j = 0; j <= line.length; j++) {
+      if (j === line.length || line[j] === " ") {
+        if (j > start) {
+          numbers[numCount++] = parseInt(line.slice(start, j), 10);
+        }
+        start = j + 1;
+      }
+    }
+
+    if (numCount > 0) {
+      sequences[i] = numbers;
+    }
+  }
+
+  return sequences;
+}
+
 export function withTiming<T>(fn: () => Promise<T>): Promise<T> {
   return (async () => {
     const start = performance.now();
