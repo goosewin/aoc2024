@@ -1,0 +1,21 @@
+{
+  "name": "aoc2024",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "bin": {
+    "aoc2024": "./index.ts"
+  },
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
