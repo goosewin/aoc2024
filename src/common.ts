@@ -51,6 +51,10 @@ export function parseNumberSequences(input: string): number[][] {
   return sequences;
 }
 
+export function parseGrid(input: string): string[] {
+  return input.trim().split("\n");
+}
+
 export function withTiming<T>(fn: () => Promise<T>): Promise<T> {
   return (async () => {
     const start = performance.now();
