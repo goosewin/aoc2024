@@ -173,3 +173,7 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Advent of Code specific files
+src/*-input
+src/*-problem.md
